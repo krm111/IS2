@@ -1,0 +1,22 @@
+.html
+	index.html (Login and Register)
+	spgf.html (Home)
+	summary.html (Summary)
+	details.html (Details of Summary)
+	preferences.html (Preferences (Income,Expenses,FamilyBonding,FamilyCode,DownloadReport) )
+	settings.html (Settings (Languaje,ChangePassword,Color,Found,LogOut) )
+	newincome.html (NewIncome in Home)
+	newexpense.html (NewExpense in Home)
+	income.html (Income in Preferences)
+	expenses.html (Expense in Preferences)
+	familybonding.html (FamilyBonding in Preferences)
+	familycode.html (FamilyCode in Preferences)
+.js
+	calc.js (Calculator for newincome.html and newexpense.html)
+	summary.js (Piechart for summary.html)
+	details.js (Barchart for details.html)
+images
+	logo.jpeg (in Index)
+	menu-icon.png ( go Preferences )
+	settings-icon.png ( go Settings )
+

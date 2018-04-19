@@ -1,9 +1,11 @@
+//Canvas
 var myCanvas = document.getElementById("myCanvas");
 myCanvas.width = 300;
 myCanvas.height = 300;
-   
+
 var ctx = myCanvas.getContext("2d");
- 
+
+//Draw Line
 function drawLine(ctx, startX, startY, endX, endY,color){
     ctx.save();
     ctx.strokeStyle = color;
@@ -13,14 +15,16 @@ function drawLine(ctx, startX, startY, endX, endY,color){
     ctx.stroke();
     ctx.restore();
 }
- 
+
+//Draw Bar
 function drawBar(ctx, upperLeftCornerX, upperLeftCornerY, width, height,color){
     ctx.save();
     ctx.fillStyle=color;
     ctx.fillRect(upperLeftCornerX,upperLeftCornerY,width,height);
     ctx.restore();
 }
- 
+
+//Data 
 var Expenses = {
     "Light": 100,
     "Water": 50,
@@ -29,7 +33,8 @@ var Expenses = {
     "Transport": 200,
     "Health": 20
 };
- 
+
+//Barchart
 var Barchart = function(options){
     this.options = options;
     this.canvas = options.canvas;
@@ -113,8 +118,8 @@ var Barchart = function(options){
         }
     }
 }
- 
- 
+
+//Create Barchart
 var myBarchart = new Barchart(
     {
         canvas:myCanvas,

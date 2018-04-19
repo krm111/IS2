@@ -1,9 +1,11 @@
+//Canvas
 var myCanvas = document.getElementById("myCanvas");
 myCanvas.width = 300;
 myCanvas.height = 300;
- 
+
 var ctx = myCanvas.getContext("2d");
 
+//Draw Line
 function drawLine(ctx, startX, startY, endX, endY){
     ctx.beginPath();
     ctx.moveTo(startX,startY);
@@ -11,12 +13,14 @@ function drawLine(ctx, startX, startY, endX, endY){
     ctx.stroke();
 }
 
+//Draw Arc
 function drawArc(ctx, centerX, centerY, radius, startAngle, endAngle){
     ctx.beginPath();
     ctx.arc(centerX, centerY, radius, startAngle, endAngle);
     ctx.stroke();
 }
 
+//Draw Pie
 function drawPieSlice(ctx,centerX, centerY, radius, startAngle, endAngle, color ){
     ctx.fillStyle = color;
     ctx.beginPath();
@@ -26,11 +30,13 @@ function drawPieSlice(ctx,centerX, centerY, radius, startAngle, endAngle, color 
     ctx.fill();
 }
 
+//Data
 var Summary = {
     "Income": 1850,
     "Expenses": 950
 };
 
+//Piechart
 var Piechart = function(options){
     this.options = options;
     this.canvas = options.canvas;
@@ -49,7 +55,8 @@ var Piechart = function(options){
         for (categ in this.options.data){
             val = this.options.data[categ];
             var slice_angle = 2 * Math.PI * val / total_value;
- 
+            
+            //drawing pie slice
             drawPieSlice(
                 this.ctx,
                 this.canvas.width/2,
@@ -67,6 +74,7 @@ var Piechart = function(options){
     }
 }
 
+//Create Piechart
 var myPiechart = new Piechart(
     {
         canvas:myCanvas,

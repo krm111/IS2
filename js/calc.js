@@ -1,42 +1,47 @@
-var cadena = "";
+//string for entry (show)
+var string1 = "";
+
+//calculate value
+function calculate(){		
  
-function calcular(){		
- 
-	var entrada = document.getElementById("txt_entrada");			
-	var cad = (cadena === "") ?  entrada.value : "(" + cadena  + ")" + entrada.value;							
+	var entry1 = document.getElementById("txt_entry");			
+	var str1 = (string1 === "") ?  entry1.value : "(" + string1 + ")" + entry1.value;							
 
 	try{
-		var resultado = eval(cad);					
-		document.getElementById("p_resultado").innerHTML = resultado;
-		entrada.value = "";
-		cadena = cad;
-		document.getElementById("p_cadena").innerHTML = cadena;
+		var result1 = eval(str1);					
+		document.getElementById("p_result").innerHTML = result1;
+		entry1.value = "";
+		string1 = str1;
+		document.getElementById("p_string").innerHTML = string1;
 	}catch(err){					
 		alert("Syntax Error");				
 	}
  
-}		
- 
-function borrar(){
-	var entrada = document.getElementById("txt_entrada");			
-	entrada.value = "";		
-	cadena = "";			
-	document.getElementById("p_resultado").innerHTML = "0";
-	document.getElementById("p_cadena").innerHTML = cadena;
-}	
- 
-function identificar_tecla(evento){
-	// Verificar si se presiona la tecla "Enter"
-	if(evento.keyCode==13){
-		calcular();		
-		// Verificar si se presiona la tecla "Esc"				
-	}else if(evento.keyCode==27){
-		borrar();
+}
+
+//delete string 
+function del(){
+	var entry1 = document.getElementById("txt_entry");			
+	entry1.value = "";		
+	string1 = "";			
+	document.getElementById("p_result").innerHTML = "0";
+	document.getElementById("p_string").innerHTML = string1;
+}
+
+//Identification Enter and Esc
+function identification_key(event){
+	// Verification Press "Enter"
+	if(event.keyCode==13){
+		calculate();		
+	// Verification Press "Esc"				
+	}else if(event.keyCode==27){
+		del();
 	}
 }
- 
-function tecla (texto){
-	var entrada = document.getElementById("txt_entrada");
-	entrada.value+=texto;
+
+//Key Press (Calculator Buttons)
+function key(text1){
+	var entry1 = document.getElementById("txt_entry");
+	entry1.value+=text1;
 }
 
