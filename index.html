@@ -15,16 +15,17 @@
                 <p style="font-size: 30px">SGPF</p>
             </div>
             <!-- Login -->
+            <script type="text/javascript" src="js/login.js"></script>
             <div id = "ipager">
                 <table style="margin-left: 170px">
                     <tr>
                         <td>Email:</td>
-                        <td><input name="txt_usr" maxlength="50" style="width:200px;" type="text"></td>
-                        <td><button type="button" onclick="window.location.href='sgpf.html'">Login</button></td>
+                        <td><input id="txt_usr" maxlength="50" style="width:200px;" type="text"></td>
+                        <td><button type="button" onclick="validate()">Login</button></td>
                     </tr>
                     <tr>
                         <td>Password:</td>
-                        <td><input name="txt_psw" maxlength="50" style="width:200px;" type="text"></td>
+                        <td><input id="txt_psw" maxlength="50" style="width:200px;" type="password"></td>
                         <td><input type="checkbox">
                             <label style="font-size: 15px">Remember me</label></td>
                     </tr>
@@ -59,13 +60,13 @@
                         <td>Password:</td>
                     </tr>
                     <tr>
-                        <td><input name="txt_psw1_a" maxlength="50" style="width:250px;" type="text"></td>
+                        <td><input name="txt_psw1_a" maxlength="50" style="width:250px;" type="password"></td>
                     </tr>
                     <tr>
                         <td>Confirm Password:</td>
                     </tr>
                     <tr>
-                        <td><input name="txt_psw2_a" maxlength="50" style="width:250px;" type="text"></td>
+                        <td><input name="txt_psw2_a" maxlength="50" style="width:250px;" type="password"></td>
                     </tr>
                     <tr>
                         <td><br></td>
