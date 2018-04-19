@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>New Income</title>
+	<link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/newincome.css">
+</head>
+<body>
+    <div id="principal">
+        <div id="ipage">
+            <a href="preferences.html">
+                <img src="img/menu-icon.png" alt="preferences" style="width:64px;height:64px;border:0;float:left;margin:18px;">
+            </a>
+            <a href="settings.html">
+                <img src="img/settings-icon.png" alt="settings" style="width:64px;height:64px;border:0;float:right;margin:18px;">
+            </a>
+            <p style="font-size: 30px">New Income</p>
+        </div>
+        <div class="clearipage"></div>
+        <div id="mid">
+            <div id ="midl">
+                <br>
+                <br>
+                <table style="margin-left: 100px">
+                    <tr>
+                        <td colspan="2">Value</td>
+                    </tr>
+                    <tr>
+                        <td>S/.</td>
+                        <td><input name="txt_value" maxlength="50" style="width:200px;" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><br></td>
+                        <td><br></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: left"><button type="button" onclick="alert('Add')">Add</button></td>
+                    </tr>
+                    <tr>
+                        <td><br></td>
+                        <td><br></td>
+                    </tr>
+                    <tr>
+                        <td><br></td>
+                        <td><br></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center"><button type="button" onclick="window.location.href='sgpf.html'">Cancel</button></td>
+                        <td style="text-align: center"><button type="button" onclick="window.location.href='sgpf.html'">Save</button></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="midr">
+                <script type="text/javascript" src="js/calc.js"></script>
+                <div style="width:600px;margin:auto;">
+                    <!-- Espacio de entrada -->
+                    <div style="width:600px;height:120px;float:left;border:2px solid;border-radius:5px;">
+                        <div style="width:580px;margin-left:10px;margin-top:10px;float:left;">
+                            <b>Entrada:</b>
+                        </div>
+                        <div style="width:570px;margin-left:10px;float:left;">
+                            <input id="txt_entrada" type="text" style="width:100%;" onkeydown="identificar_tecla(event)" autofocus>
+                        </div>
+                        <div style="width:580px;margin-left:10px;margin-bottom:10px;float:left;color:blue;">
+				            <p id="p_cadena"></p>
+                        </div>
+                    </div>
+                    <!-- Espacio de resutlado -->
+                    <div style="width:160px;height:120px;float:right;border:2px solid;border-radius:5px;">
+                        <div style="width:140px;margin-left:10px;margin-top:10px;float:left;">
+                            <b>Resultado:</b>
+                        </div>
+                        <div style="width:140px;margin-left:10px;float:left;text-align:center;color:blue;font-size:23px;">
+                            <p id="p_resultado">0</p>
+                        </div>
+                    </div>
+                    <!-- Aqui van los botones de la calculadora -->
+                    <div style="width:314px;height:170px;float:left;margin-top:10px;border:2px solid;border-radius:5px;">
+                        <br>
+                        <table>
+                            <tr>
+                                <td> <BUTTON id="7" onclick="tecla('7')">7</BUTTON></td>
+                                <td> <BUTTON id="8" onclick="tecla('8')">8</BUTTON></td>
+                                <td> <BUTTON id="9" onclick="tecla('9')">9</BUTTON></td>
+                                <td colspan="2"> <BUTTON id="BORRAR" onclick="borrar()">BORRAR</BUTTON></td>
+                            </tr>
+                            <tr>
+                                <td> <BUTTON id="4" onclick="tecla('4')">4</BUTTON></td>
+                                <td> <BUTTON id="5" onclick="tecla('5')">5</BUTTON></td>
+                                <td> <BUTTON id="6" onclick="tecla('6')">6</BUTTON></td>
+                                <td> <BUTTON id="*" onclick="tecla('*')">*</BUTTON></td>
+                                <td> <BUTTON id="/" onclick="tecla('/')">/</BUTTON></td>
+                            </tr>
+                            <tr>
+                                <td> <BUTTON id="1" onclick="tecla('1')">1</BUTTON></td>
+                                <td> <BUTTON id="2" onclick="tecla('2')">2</BUTTON></td>
+                                <td> <BUTTON id="3" onclick="tecla('3')">3</BUTTON></td>
+                                <td> <BUTTON id="+" onclick="tecla('+')">+</BUTTON></td>
+                                <td> <BUTTON id="-" onclick="tecla('-')">-</BUTTON></td>
+                            </tr>
+                            <tr>
+                                <td> <BUTTON id="0" onclick="tecla('0')">0</BUTTON></td>
+                                <td> <BUTTON id="." onclick="tecla('.')">.</BUTTON></td>
+                                <td colspan="3"> <BUTTON id="=" onclick="calcular()">ENTER</BUTTON></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearmid"></div>
+        <div id="fpage">
+            <p>Hacemos Software</p>
+        </div>
+    </div>
+</body>
+</html>
